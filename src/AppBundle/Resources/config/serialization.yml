@@ -1,0 +1,95 @@
+AppBundle\Entity\ApiUser:
+    attributes:
+        id:
+            groups: ['userApi', 'auth-token']
+        userClientId:
+            groups: ['userApi', 'auth-token']
+
+AppBundle\Entity\UserKey:
+    attributes:
+        id:
+            groups: ['auth-token']
+        value:
+            groups: ['auth-token']
+        createdAt:
+            groups: ['auth-token']
+        apiUser:
+            groups: ['auth-token']
+
+AppBundle\Entity\Commercials:
+    attributes:
+        id:
+            groups: ["commercials", "requirements"]
+        firstName:
+            groups: ["commercials", "requirements"]
+        lastName:
+            groups: ["commercials", "requirements"]
+        emailAdress:
+            groups: ["commercials", "requirements"]
+        phoneNumber:
+            groups: ["commercials", "requirements"]
+
+AppBundle\Entity\Customers:
+    attributes:
+        id:
+            groups: ["customers", "requirements"]
+        companyName:
+            groups: ["customers", "requirements"]
+
+AppBundle\Entity\Status:
+    attributes:
+        id:
+            groups: ["status", "requirements"]
+        name:
+            groups: ["status", "requirements"]
+
+AppBundle\Entity\KeySuccessFactors:
+    attributes:
+        id:
+            groups: ["requirements"]
+        text:
+            groups: ["requirements"]
+
+AppBundle\Entity\Consultants:
+    attributes:
+        id:
+            groups: ["requirements"]
+        name:
+            groups: ["requirements"]
+
+AppBundle\Entity\Requirements:
+    attributes:
+        id:
+            groups: ["requirements"]
+        postDate:
+            groups: ["requirements"]
+        startDate:
+            groups: ["requirements"]
+        location:
+            groups: ["requirements"]
+        contactName:
+            groups: ["requirements"]
+        title:
+            groups: ["requirements"]
+        fullDescription:
+            groups: ["requirements"]
+        rate:
+            groups: ["requirements"]
+        nbOfMonth:
+            groups: ["requirements"]
+        dayByWeek:
+            groups: ["requirements"]
+        shareTo:
+            groups: ["requirements"]
+        commercial:
+            groups: ["requirements"]
+        status:
+            groups: ["requirements"]
+        keySuccessFactorsList:
+            groups: ["requirements"]
+        consultantsList:
+            groups: ["requirements"]
+        customer:
+            groups: ["requirements"]
+        file:
+            groups: ["requirements"]

@@ -1,0 +1,13 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+apiuser:
+    type:     rest
+    resource: AppBundle\Controller\ApiUserController
+
+auth-tokens:
+    type:     rest
+    resource: AppBundle\Controller\UserKeyController
+
+

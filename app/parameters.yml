@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: localhost
+    database_port: 3306
+    database_name: id3126091_snapat
+    database_user: id3126091_snapat
+    database_password: snap-at33
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: fa0330b795d0054f7091a24d0c22ee14a2c66ef3

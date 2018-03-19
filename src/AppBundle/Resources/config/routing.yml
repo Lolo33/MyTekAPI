@@ -1,0 +1,96 @@
+
+get_buisnesses:
+    path:     /getBuisnesses
+    defaults: { _controller: AppBundle:Buisnesses:getBuisnesses }
+
+get_buisness:
+    path:     /getBuisness
+    defaults: { _controller: AppBundle:Buisnesses:getBuisness }
+
+post_buisness:
+    path:     /postBuisness
+    defaults: { _controller: AppBundle:Buisnesses:postBuisness }
+
+remove_buisness:
+    path:     /removeBuisness
+    defaults: { _controller: AppBundle:Buisnesses:removeBuisness }
+
+update_buisness:
+    path:     /updateBuisness
+    defaults: { _controller: AppBundle:Buisnesses:updateBuisness }
+
+get_lieu:
+    path:     /getLieu
+    defaults: { _controller: AppBundle:Complexe:getLieu }
+
+get_lieux:
+    path:     /getLieux
+    defaults: { _controller: AppBundle:Complexe:getLieux }
+
+get_tarifs:
+    path:     /getTarifs
+    defaults: { _controller: AppBundle:PlanningTarif:getTarifs }
+
+get_tarif:
+    path:     /getTarif
+    defaults: { _controller: AppBundle:PlanningTarif:getTarif }
+
+get_terrains:
+    path:     /getTerrains
+    defaults: { _controller: AppBundle:Terrain:getTerrains }
+
+get_terrain:
+    path:     /getTerrain
+    defaults: { _controller: AppBundle:Terrain:getTerrain }
+
+get_comissions:
+    path:     /getComissions
+    defaults: { _controller: AppBundle:PlanningComission:getComissions }
+
+get_comission:
+    path:     /getComission
+    defaults: { _controller: AppBundle:PlanningComission:getComission }
+
+get_horaires:
+    path:     /getHoraires
+    defaults: { _controller: AppBundle:PlageHoraire:getHoraires }
+
+get_horaire:
+    path:     /getHoraire
+    defaults: { _controller: AppBundle:PlageHoraire:getHoraire }
+
+get_reservations:
+    path:     /getReservations
+    defaults: { _controller: AppBundle:Reservation:getReservations }
+
+get_reservation:
+    path:     /getReservation
+    defaults: { _controller: AppBundle:Reservation:getReservation }
+
+post_reservation:
+    path:     /postReservation
+    defaults: { _controller: AppBundle:Reservation:postReservation }
+
+update_reservation:
+    path:     /updateReservation
+    defaults: { _controller: AppBundle:Reservation:updateReservation }
+
+connect:
+    path:     /connect
+    defaults: { _controller: AppBundle:Commercials:connect }
+
+get_requirements:
+    path:     /getRequirements
+    defaults: { _controller: AppBundle:Requirements:getRequirements }
+
+post_requirements:
+    path:     /postRequirements
+    defaults: { _controller: AppBundle:Requirements:postRequirements }
+
+get_clients:
+    path:     /getClients
+    defaults: { _controller: AppBundle:Clients:getClients }
+
+get_status:
+    path:     /getStatus
+    defaults: { _controller: AppBundle:Status:getStatus }
