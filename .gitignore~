@@ -24,9 +24,5 @@
 
 /web/bundles/
 
-<<<<<<< HEAD
 /.idea/*
 /vendor/*
-
-/app/parameters.yml
-/app/config/parameters.yml
