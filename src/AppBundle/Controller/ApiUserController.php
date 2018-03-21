@@ -68,7 +68,6 @@ class ApiUserController extends Controller
             $encoded = $encoder->encodePassword($user, $user->getUserPlainPassword());
             $user->setUserPassword($encoded);
 
-
             $em->persist($user);
             $em->flush();
             return $user;
