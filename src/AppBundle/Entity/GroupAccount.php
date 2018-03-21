@@ -5,12 +5,12 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Groupaccount
+ * GroupAccount
  *
- * @ORM\Table(name="groupaccount")
+ * @ORM\Table(name="group_account")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\GroupaccountRepository")
  */
-class Groupaccount
+class GroupAccount
 {
     /**
      * @var int
@@ -31,16 +31,16 @@ class Groupaccount
     /**
      * @var int
      *
-     * @ORM\Column(name="account_id", type="integer", unique=true)
+     * @ORM\ManyToOne(targetEntity="Account")
      */
-    private $accountId;
+    private $account;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="group_id", type="integer", unique=true)
+     * @ORM\ManyToOne(targetEntity="Group")
      */
-    private $groupId;
+    private $group;
 
 
     /**
@@ -58,7 +58,7 @@ class Groupaccount
      *
      * @param bool $isAdmin
      *
-     * @return Groupaccount
+     * @return GroupAccount
      */
     public function setIsAdmin($isAdmin)
     {
@@ -77,51 +77,52 @@ class Groupaccount
         return $this->isAdmin;
     }
 
+
     /**
-     * Set accountId.
+     * Set account
      *
-     * @param int $accountId
+     * @param \AppBundle\Entity\Account $account
      *
-     * @return Groupaccount
+     * @return GroupAccount
      */
-    public function setAccountId($accountId)
+    public function setAccount(\AppBundle\Entity\Account $account = null)
     {
-        $this->accountId = $accountId;
+        $this->account = $account;
 
         return $this;
     }
 
     /**
-     * Get accountId.
+     * Get account
      *
-     * @return int
+     * @return \AppBundle\Entity\Account
      */
-    public function getAccountId()
+    public function getAccount()
     {
-        return $this->accountId;
+        return $this->account;
     }
 
     /**
-     * Set groupId.
+     * Set group
      *
-     * @param int $groupId
+     * @param \AppBundle\Entity\Group $group
      *
-     * @return Groupaccount
+     * @return GroupAccount
      */
-    public function setGroupId($groupId)
+    public function setGroup(\AppBundle\Entity\Group $group = null)
     {
-        $this->groupId = $groupId;
+        $this->group = $group;
 
         return $this;
     }
 
     /**
-     * Get groupId.
+     * Get group
      *
-     * @return int
+     * @return \AppBundle\Entity\Group
      */
-    public function getGroupId()
+    public function getGroup()
     {
-        return $this->groupId;
+        return $this->group;
     }
 }

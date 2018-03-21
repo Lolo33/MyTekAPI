@@ -5,12 +5,12 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Groupe
+ * Group
  *
  * @ORM\Table(name="groupe")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\GroupeRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\GroupRepository")
  */
-class Groupe
+class Group
 {
     /**
      * @var int
@@ -51,7 +51,7 @@ class Groupe
      *
      * @param string $name
      *
-     * @return Groupe
+     * @return Group
      */
     public function setName($name)
     {
@@ -75,7 +75,7 @@ class Groupe
      *
      * @param string|null $avatar
      *
-     * @return Groupe
+     * @return Group
      */
     public function setAvatar($avatar = null)
     {

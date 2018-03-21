@@ -9,11 +9,8 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="mediatek")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\MediatekRepository")
- * @ORM\InheritanceType("JOINED")
- * @ORM\DiscriminatorColumn(name="type", type="string")
- * @ORM\DiscriminatorMap({"grp" = "MediatekGroup", "user" = "MediatekUser"})
  */
-abstract class Mediatek
+class Mediatek
 {
     /**
      * @var int
@@ -25,11 +22,25 @@ abstract class Mediatek
     private $id;
 
     /**
+     * @var int
+     *
+     * @ORM\ManyToOne(targetEntity="Account")
+     */
+    private $account;
+
+    /**
      * @var bool
      *
      * @ORM\Column(name="is_public", type="boolean")
      */
     private $isPublic;
+
+    /**
+     * @var int
+     *
+     * @ORM\ManyToOne(targetEntity="Group")
+     */
+    private $group;
 
 
     /**

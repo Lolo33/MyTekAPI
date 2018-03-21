@@ -1,0 +1,24 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * MediatekGroup
+ *
+ * @ORM\Table(name="mediatek_group")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\MediatekGroupRepository")
+ */
+class MediatekGroup extends Mediatek
+{
+
+    /**
+     * @var Group
+     *
+     * @ORM\ManyToOne(targetEntity="Group")
+     */
+    private $group;
+
+
+}

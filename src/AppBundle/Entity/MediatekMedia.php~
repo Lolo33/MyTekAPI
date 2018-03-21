@@ -1,0 +1,57 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * MediatekMedia
+ *
+ * @ORM\Table(name="mediatekmedia")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\MediatekMediaRepository")
+ */
+class MediatekMedia
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var int
+     *
+     * @ORM\ManyToOne(targetEntity="Media")
+     */
+    private $media;
+
+    /**
+     * @var int
+     *
+     * @ORM\ManyToOne(targetEntity="Mediatek")
+     */
+    private $mediatek;
+
+    /**
+     * @var int
+     *
+     * @ORM\ManyToOne(targetEntity="State")
+     */
+    private $state;
+
+
+    /**
+     * Get id.
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+}
